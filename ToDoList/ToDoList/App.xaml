@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application x:Class="ToDoList.App"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:helpers="clr-namespace:ToDoList.Helpers;assembly=ToDoList"
+             xmlns:inputKit="clr-namespace:Plugin.InputKit.Shared.Controls;assembly=Plugin.InputKit">
+    <Application.Resources>
+        <!--  COLORS  -->
+        <Color x:Key="White">#FFFFFF</Color>
+        <Color x:Key="Gray">#575767</Color>
+        <Color x:Key="LightGray">LightGray</Color>
+        <Color x:Key="TimeColor">#DADADA</Color>
+        <Color x:Key="BackgroundColor">#141419</Color>
+        <Color x:Key="EvenSelectorColor">#FFC0CB</Color>
+        <Color x:Key="OddSelectorColor">#A2D5C6</Color>
+        <Color x:Key="BackgroundDeleteButtonColor">#FFCC99</Color>
+        <Color x:Key="BackgroundCompletedTasksColor">#FFED87</Color>
+
+
+
+        <!--  LABELS  -->
+        <Style x:Key="CompletedLabelStyle" TargetType="Label">
+            <Setter Property="FontAttributes" Value="Bold" />
+            <Setter Property="FontSize" Value="18" />
+            <Setter Property="TextColor" Value="{StaticResource Gray}" />
+            <Setter Property="HorizontalTextAlignment" Value="Start" />
+        </Style>
+
+        <Style x:Key="NewTaskLabel" TargetType="Label">
+            <Setter Property="FontAttributes" Value="Bold" />
+            <Setter Property="FontSize" Value="25" />
+            <Setter Property="TextColor" Value="{StaticResource Gray}" />
+            <Setter Property="HorizontalTextAlignment" Value="Center" />
+        </Style>
+
+        <Style x:Key="TimeLabelStyle" TargetType="Label">
+            <Setter Property="FontAttributes" Value="Bold" />
+            <Setter Property="FontSize" Value="32" />
+            <Setter Property="TextColor" Value="{StaticResource BackgroundDeleteButtonColor}" />
+            <Setter Property="WidthRequest" Value="227" />
+            <Setter Property="HeightRequest" Value="39" />
+            <Setter Property="HorizontalTextAlignment" Value="Center" />
+        </Style>
+
+        <Style x:Key="CellIncompletedLabelStyle" TargetType="Label">
+            <Setter Property="FontAttributes" Value="Bold" />
+            <Setter Property="FontSize" Value="18" />
+            <Setter Property="TextColor" Value="{StaticResource TimeColor}" />
+            <Setter Property="VerticalOptions" Value="Center" />
+            <Setter Property="HorizontalOptions" Value="Start" />
+        </Style>
+
+        <Style x:Key="CellCompletedLabelStyle" TargetType="Label">
+            <Setter Property="FontAttributes" Value="Bold" />
+            <Setter Property="FontSize" Value="18" />
+            <Setter Property="TextColor" Value="{StaticResource Gray}" />
+            <Setter Property="VerticalOptions" Value="Center" />
+            <Setter Property="HorizontalOptions" Value="Start" />
+        </Style>
+
+        <!--  CHECKBOX  -->
+        <Style x:Key="CheckBoxStyle" TargetType="inputKit:CheckBox">
+            <Setter Property="IconColor" Value="{StaticResource White}" />
+            <Setter Property="Color" Value="{StaticResource White}" />
+            <Setter Property="Padding" Value="10" />
+        </Style>
+
+        <!--  EDITORS  -->
+        <Style x:Key="EditorStyle" TargetType="Editor">
+            <Setter Property="BackgroundColor" Value="{StaticResource Gray}" />
+            <Setter Property="AutoSize" Value="TextChanges" />
+        </Style>
+
+    </Application.Resources>
+</Application>
